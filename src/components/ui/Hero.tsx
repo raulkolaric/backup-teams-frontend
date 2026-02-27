@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
+  const t = useTranslations('Hero');
+
   return (
     <section className="relative w-full min-h-[90vh] flex flex-col items-center justify-center px-6 py-24 overflow-hidden">
       {/* Background radial glow effect */}
@@ -14,27 +17,27 @@ export default function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent"></span>
           </span>
-          Secure Microsoft Teams Backup Engine
+          {t('status')}
         </div>
         
         {/* Main Headline */}
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.1]">
-          Backup your <span className="text-accent">Teams</span> data.<br />
-          Never lose context.
+          {t('title1')}<span className="text-accent">{t('titleAccent')}</span>{t('title2')}<br />
+          {t('title3')}
         </h1>
         
         {/* Sub-headline */}
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-          An enterprise-grade, encrypted backup solution designed to capture your Microsoft Teams chats, files, and channels. Maintain full ownership of your organization's entire memory.
+          {t('description')}
         </p>
         
         {/* Call to Actions (CTAs) */}
         <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full justify-center">
-          <button className="bg-accent text-accent-foreground px-8 py-4 rounded-md font-semibold text-base transition-all hover:opacity-90 shadow-[0_0_20px_rgba(212,106,67,0.25)] min-w-[200px]">
-            Start Backup
+          <button className="bg-accent text-accent-foreground px-8 py-4 rounded-md font-semibold text-base transition-all hover:opacity-90 shadow-[0_0_20px_rgba(212,106,67,0.25)] min-w-[200px] cursor-pointer">
+            {t('startAction')}
           </button>
           <button className="bg-card text-foreground border border-border px-8 py-4 rounded-md font-medium text-base transition-colors hover:bg-muted cursor-pointer min-w-[200px]">
-            View Documentation
+            {t('docsAction')}
           </button>
         </div>
       </div>

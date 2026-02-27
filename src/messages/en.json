@@ -1,0 +1,12 @@
+{
+    "Hero": {
+        "status": "Secure Microsoft Teams Backup Engine",
+        "title1": "Backup your ",
+        "titleAccent": "Teams",
+        "title2": " data.",
+        "title3": "Never lose context.",
+        "description": "An enterprise-grade, encrypted backup solution designed to capture your Microsoft Teams chats, files, and channels. Maintain full ownership of your organization's entire memory.",
+        "startAction": "Start Backup",
+        "docsAction": "View Documentation"
+    }
+}

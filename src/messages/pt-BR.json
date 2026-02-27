@@ -1,0 +1,12 @@
+{
+    "Hero": {
+        "status": "Solução Segura de Backup do Microsoft Teams",
+        "title1": "Faça backup do ",
+        "titleAccent": "Teams",
+        "title2": ".",
+        "title3": "Nunca perca o contexto.",
+        "description": "Uma solução de backup baseada em criptografia empresarial criada para salvar as suas mensagens, arquivos e canais do seu Microsoft Teams. Mantenha controle absoluto da memória operacional da sua organização.",
+        "startAction": "Iniciar Backup",
+        "docsAction": "Ver Documentação"
+    }
+}
