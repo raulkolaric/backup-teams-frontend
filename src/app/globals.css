@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Custom Espresso & Terracotta Theme (Warm Terminal) */
+  --background: #1f1a18;
+  /* Rich, dark espresso canvas */
+  --foreground: #e5d9c5;
+  /* Soft, warm parchment text */
+
+  --card: #27201d;
+  /* Elevated dark coffee for panels/cards */
+  --card-foreground: #e5d9c5;
+
+  --border: #3e322a;
+  /* Muted mocha border */
+
+  --accent: #d46a43;
+  /* Terracotta/burnt orange accent */
+  --accent-foreground: #1f1a18;
+
+  --muted: #352923;
+  /* Muted background for active/hover states */
+  --muted-foreground: #a59286;
+  /* Dimmed text */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
 }
