@@ -13,10 +13,10 @@ export default function ComparisonTable() {
   ];
 
   return (
-    <section className="relative w-full max-w-4xl mx-auto px-6 py-24 flex flex-col gap-12">
+    <section className="relative w-full max-w-6xl mx-auto px-6 py-24 flex flex-col gap-12">
       
       {/* Section Header */}
-      <div className="flex flex-col gap-4 text-center items-center">
+      <div className="flex flex-col gap-4 text-left items-start">
         <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
           {t('title')}
         </h2>

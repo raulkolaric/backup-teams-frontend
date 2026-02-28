@@ -5,7 +5,7 @@ export default function FeaturesGrid() {
   const t = useTranslations('Features');
 
   return (
-    <section className="relative w-full max-w-7xl mx-auto px-6 py-24 flex flex-col gap-16">
+    <section className="relative w-full max-w-6xl mx-auto px-6 py-24 flex flex-col gap-16">
       
       {/* Section Header */}
       <div className="flex flex-col gap-4 max-w-2xl">

@@ -5,14 +5,25 @@ export default function Hero() {
   const t = useTranslations('Hero');
 
   return (
-    <section className="relative w-full min-h-[90vh] flex flex-col items-center justify-center px-6 py-24 overflow-hidden">
-      {/* Background radial glow effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-accent opacity-10 blur-[120px] rounded-full pointer-events-none" />
+    <section className="relative w-full min-h-[85vh] flex flex-col justify-center overflow-hidden">
+      {/* Full Bleed Suble Animated Grid */}
+      <div 
+        className="absolute inset-0 z-0 pointer-events-none opacity-[0.04]"
+        style={{
+          backgroundImage: 'linear-gradient(to right, var(--foreground) 1px, transparent 1px), linear-gradient(to bottom, var(--foreground) 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
+          maskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)',
+          animation: 'pan-grid 20s linear infinite',
+        }}
+      />
       
-      <div className="relative z-10 flex flex-col items-center text-center max-w-4xl gap-8">
+      {/* 6xl Constrained Content Wrapper */}
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-24 flex flex-col mt-8">
+        <div className="flex flex-col items-start text-left max-w-4xl gap-8">
         
         {/* Status Pill */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-card/60 backdrop-blur-md text-sm text-muted-foreground mb-2 shadow-sm">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-card text-sm text-muted-foreground mb-2 shadow-sm">
           <span className="relative flex h-2.5 w-2.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent"></span>
@@ -32,7 +43,7 @@ export default function Hero() {
         </p>
         
         {/* Call to Actions (CTAs) */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full justify-start">
           <button className="bg-accent text-accent-foreground px-8 py-4 rounded-md font-semibold text-base transition-all hover:opacity-90 shadow-[0_0_20px_rgba(212,106,67,0.25)] min-w-[200px] cursor-pointer">
             {t('startAction')}
           </button>
@@ -43,7 +54,7 @@ export default function Hero() {
       </div>
       
       {/* Decorative Mock Terminal Window */}
-      <div className="w-full max-w-3xl mt-24 rounded-xl border border-border bg-card shadow-2xl overflow-hidden backdrop-blur-sm opacity-95">
+      <div className="w-full mt-24 rounded-xl border border-border bg-card shadow-2xl overflow-hidden">
         
         {/* Terminal Header */}
         <div className="px-4 py-3 border-b border-border bg-muted/30 flex items-center gap-2">
@@ -76,6 +87,7 @@ export default function Hero() {
           <div className="mt-3 flex items-center gap-3">
             <span className="w-4 h-4 border-2 border-accent border-t-transparent rounded-full animate-spin" />
             <span className="text-foreground opacity-80">Encrypting local volume payload...</span>
+          </div>
           </div>
         </div>
       </div>
