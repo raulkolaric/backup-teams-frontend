@@ -8,5 +8,29 @@
         "description": "An enterprise-grade, encrypted backup solution designed to capture your Microsoft Teams chats, files, and channels. Maintain full ownership of your organization's entire memory.",
         "startAction": "Start Backup",
         "docsAction": "View Documentation"
+    },
+    "Features": {
+        "title": "Why backup Microsoft Teams?",
+        "subtitle": "Essential features engineered for enterprise compliance and peace of mind.",
+        "f1Title": "Automated Sync",
+        "f1Desc": "Set it and forget it. Our engine runs daily differential backups of your entire organization.",
+        "f2Title": "Zero-Knowledge Encryption",
+        "f2Desc": "All data is securely encrypted at rest (AES-256) on your local/cloud volumes.",
+        "f3Title": "Complete Graph API Coverage",
+        "f3Desc": "We pull full message history, channel files, and threaded replies faithfully.",
+        "f4Title": "Immediate Export",
+        "f4Desc": "Extract and restore formats native to auditors and legal discovery teams."
+    },
+    "Comparison": {
+        "title": "Why default tools aren't enough",
+        "subtitle": "Microsoft Teams is built for communication, not for permanent, searchable record keeping.",
+        "featureHeader": "Capability",
+        "ourHeader": "Teams Backup Engine",
+        "teamsHeader": "Microsoft Teams",
+        "feat1": "Local Encrypted Storage (AES-256)",
+        "feat2": "Full Thread History Retention",
+        "feat3": "Elastic Search Integration",
+        "feat4": "Inside-File Content Search System",
+        "feat5": "Instant Legal Export Formats"
     }
 }

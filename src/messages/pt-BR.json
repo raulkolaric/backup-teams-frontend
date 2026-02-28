@@ -8,5 +8,29 @@
         "description": "Uma solução de backup baseada em criptografia empresarial criada para salvar as suas mensagens, arquivos e canais do seu Microsoft Teams. Mantenha controle absoluto da memória operacional da sua organização.",
         "startAction": "Iniciar Backup",
         "docsAction": "Ver Documentação"
+    },
+    "Features": {
+        "title": "Por que fazer backup do Microsoft Teams?",
+        "subtitle": "Tecnologia essencial focada na conformidade e paz de espírito da sua empresa.",
+        "f1Title": "Sincronização Automatizada",
+        "f1Desc": "Configure uma vez. Nosso sistema executa backups diferenciais complexos diariamente.",
+        "f2Title": "Criptografia Absoluta",
+        "f2Desc": "Todos os dados são seguramente encriptados armazenados localmente ou na nuvem (AES-256).",
+        "f3Title": "Cobertura Total da Graph API",
+        "f3Desc": "Histórico completo de mensagens, arquivos de canal e respostas perfeitamente preservadas.",
+        "f4Title": "Auditoria Fácil",
+        "f4Desc": "Exporte diretamente para os formatos requeridos por times legais e investigações com apenas um clique."
+    },
+    "Comparison": {
+        "title": "Por que as ferramentas nativas não bastam?",
+        "subtitle": "O Microsoft Teams foi criado para comunicação, não para arquivamento definitivo e pesquisável.",
+        "featureHeader": "Capacidade",
+        "ourHeader": "Engine de Backup",
+        "teamsHeader": "Microsoft Teams",
+        "feat1": "Armazenamento Criptografado Local (AES-256)",
+        "feat2": "Retenção Absoluta de Histórico",
+        "feat3": "Integração Nativa com Elastic Search",
+        "feat4": "Sistema de Busca Dentro do Conteúdo do Arquivo",
+        "feat5": "Exportações Instantâneas para Equipes Legais"
     }
 }
