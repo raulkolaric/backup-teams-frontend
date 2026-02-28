@@ -48,7 +48,7 @@ export default function ComparisonTable() {
               {/* Our Engine Status */}
               <div className="col-span-1 flex justify-center">
                 {feature.ours ? (
-                  <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent shadow-[0_0_10px_rgba(212,106,67,0.3)]">
+                  <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent shadow-[0_0_10px_rgba(34,197,94,0.3)]">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   </div>
                 ) : (

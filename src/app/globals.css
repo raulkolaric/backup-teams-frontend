@@ -5,27 +5,25 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Custom Espresso & Terracotta Theme (Warm Terminal) */
-  /* Rich, dark espresso canvas */
-  /* Soft, warm parchment text */
+  /* Green Theme */
 
   --card: oklch(1 0 0);
-  /* Elevated dark coffee for panels/cards */
   --card-foreground: oklch(0.145 0 0);
 
   --border: oklch(0.922 0 0);
-  /* Muted mocha border */
 
-  --accent: oklch(0.97 0 0);
-  /* Terracotta/burnt orange accent */
-  --accent-foreground: oklch(0.205 0 0);
+  --accent: oklch(0.65 0.15 150);
+  /* Green accent */
+  --accent-foreground: oklch(0.985 0 0);
+  /* White text on accent */
 
-  --muted: oklch(0.97 0 0);
-  /* Muted background for active/hover states */
+  --muted: oklch(0.96 0.01 150);
+  /* Muted background */
   --muted-foreground: oklch(0.556 0 0);
   /* Dimmed text */
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: oklch(0.98 0.02 150);
+  /* Off-white green */
   --foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
@@ -113,7 +111,7 @@ body {
 
 .dark {
 
-  --background: oklch(0.145 0 0);
+  --background: oklch(0.15 0.01 150);
 
   --foreground: oklch(0.985 0 0);
 
@@ -137,7 +135,7 @@ body {
 
   --muted-foreground: oklch(0.708 0 0);
 
-  --accent: oklch(0.269 0 0);
+  --accent: oklch(0.65 0.15 150);
 
   --accent-foreground: oklch(0.985 0 0);
 
@@ -180,6 +178,7 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

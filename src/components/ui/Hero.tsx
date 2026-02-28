@@ -44,7 +44,7 @@ export default function Hero() {
         
         {/* Call to Actions (CTAs) */}
         <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full justify-start">
-          <button className="bg-accent text-accent-foreground px-8 py-4 rounded-md font-semibold text-base transition-all hover:opacity-90 shadow-[0_0_20px_rgba(212,106,67,0.25)] min-w-[200px] cursor-pointer">
+          <button className="bg-accent text-accent-foreground px-8 py-4 rounded-md font-semibold text-base transition-all hover:opacity-90 shadow-[0_0_20px_rgba(34,197,94,0.25)] min-w-[200px] cursor-pointer">
             {t('startAction')}
           </button>
           <button className="bg-card text-foreground border border-border px-8 py-4 rounded-md font-medium text-base transition-colors hover:bg-muted cursor-pointer min-w-[200px]">
