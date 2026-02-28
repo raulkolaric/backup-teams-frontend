@@ -1,5 +1,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import { WordFadeIn } from './word-fade-in';
+import { BlurFade } from './blur-fade';
 
 export default function FeaturesGrid() {
   const t = useTranslations('Features');
@@ -9,12 +11,16 @@ export default function FeaturesGrid() {
       
       {/* Section Header */}
       <div className="flex flex-col gap-4 max-w-2xl">
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
-          {t('title')}
-        </h2>
-        <p className="text-lg text-muted-foreground leading-relaxed">
-          {t('subtitle')}
-        </p>
+        <WordFadeIn 
+          words={t('title')} 
+          className="text-4xl md:text-5xl text-balance" 
+          highlightWords={['Teams']} 
+        />
+        <BlurFade delay={0.25} inView>
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            {t('subtitle')}
+          </p>
+        </BlurFade>
       </div>
 
       {/* Bento Grid */}
