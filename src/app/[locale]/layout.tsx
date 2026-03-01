@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   description: "Enterprise-grade Microsoft Teams backups",
 };
 
+import { Providers } from "@/components/providers";
+import { Toaster } from "@/components/ui/sonner";
+
 export default async function RootLayout({
   children,
   params,
@@ -31,13 +34,16 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className="dark">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
-          <div className="flex justify-end p-4 absolute top-0 right-0 z-50">
-            <LanguageSwitcher />
-          </div>
-          {children}
+          <Providers>
+            <div className="flex justify-end p-4 absolute top-0 right-0 z-50">
+              <LanguageSwitcher />
+            </div>
+            {children}
+            <Toaster />
+          </Providers>
         </NextIntlClientProvider>
       </body>
     </html>
