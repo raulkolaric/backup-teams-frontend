@@ -1,0 +1,116 @@
+import Link from "next/link";
+import { Github, Twitter, Linkedin } from "lucide-react";
+import { useTranslations } from "next-intl";
+
+export default function Footer() {
+  const t = useTranslations("Index"); // Assuming useTranslations exists for localization if needed 
+
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="w-full border-t border-border bg-background pt-16 pb-8">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+          {/* Brand & Mission Statement */}
+          <div className="space-y-8 xl:col-span-1">
+            <span className="text-xl font-bold tracking-tight text-foreground flex items-center gap-2">
+               Backup Teams
+               <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            </span>
+            <p className="text-sm leading-6 text-muted-foreground w-4/5">
+              Enterprise-grade backup solutions specifically engineered for Microsoft Teams architecture. Secure your chat history and files with transparent Graph API connections.
+            </p>
+            <div className="flex space-x-6">
+              <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
+                <span className="sr-only">GitHub</span>
+                <Github className="h-5 w-5" aria-hidden="true" />
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
+                <span className="sr-only">Twitter</span>
+                <Twitter className="h-5 w-5" aria-hidden="true" />
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
+                <span className="sr-only">LinkedIn</span>
+                <Linkedin className="h-5 w-5" aria-hidden="true" />
+              </a>
+            </div>
+          </div>
+
+          {/* Links Grid */}
+          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 className="text-sm font-semibold leading-6 text-foreground">Solutions</h3>
+                <nav aria-label="Solutions navigation" className="mt-6 flex flex-col space-y-4">
+                  <Link href="#features" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
+                    Features
+                  </Link>
+                  <Link href="#pricing" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
+                    Pricing
+                  </Link>
+                  <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
+                    Enterprise
+                  </Link>
+                  <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
+                    API Access
+                  </Link>
+                </nav>
+              </div>
+              <div className="mt-10 md:mt-0">
+                <h3 className="text-sm font-semibold leading-6 text-foreground">Support</h3>
+                <nav aria-label="Support navigation" className="mt-6 flex flex-col space-y-4">
+                  <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
+                    Documentation
+                  </Link>
+                  <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
+                    Guides
+                  </Link>
+                  <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
+                    API Status
+                  </Link>
+                </nav>
+              </div>
+            </div>
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 className="text-sm font-semibold leading-6 text-foreground">Company</h3>
+                <nav aria-label="Company navigation" className="mt-6 flex flex-col space-y-4">
+                  <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
+                    About
+                  </Link>
+                  <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
+                    Blog
+                  </Link>
+                  <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
+                    Partners
+                  </Link>
+                </nav>
+              </div>
+              <div className="mt-10 md:mt-0">
+                <h3 className="text-sm font-semibold leading-6 text-foreground">Legal</h3>
+                <nav aria-label="Legal navigation" className="mt-6 flex flex-col space-y-4">
+                  <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
+                    Privacy Policy
+                  </Link>
+                  <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
+                    Terms of Service
+                  </Link>
+                  <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
+                    Data Processing
+                  </Link>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Bottom Bar */}
+        <div className="mt-16 border-t border-border pt-8 sm:mt-20 lg:mt-24">
+          <p className="text-xs leading-5 text-muted-foreground">
+            &copy; {currentYear} Backup Teams, Inc. All rights reserved. Microsoft Teams is a trademark of Microsoft Corporation.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
