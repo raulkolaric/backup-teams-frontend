@@ -32,5 +32,46 @@
         "feat3": "Elastic Search Integration",
         "feat4": "Inside-File Content Search System",
         "feat5": "Instant Legal Export Formats"
+    },
+    "Header": {
+        "features": "Features",
+        "pricing": "Pricing",
+        "enterprise": "Enterprise",
+        "login": "Log in",
+        "getStarted": "Get Started"
+    },
+    "Footer": {
+        "description": "Enterprise-grade backup solutions specifically engineered for Microsoft Teams architecture. Secure your chat history and files with transparent Graph API connections.",
+        "solutions": "Solutions",
+        "features": "Features",
+        "pricing": "Pricing",
+        "enterprise": "Enterprise",
+        "apiAccess": "API Access",
+        "support": "Support",
+        "documentation": "Documentation",
+        "guides": "Guides",
+        "apiStatus": "API Status",
+        "company": "Company",
+        "about": "About",
+        "blog": "Blog",
+        "partners": "Partners",
+        "legal": "Legal",
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "dataProcessing": "Data Processing",
+        "copyright": "All rights reserved. Microsoft Teams is a trademark of Microsoft Corporation."
+    },
+    "Terminal": {
+        "title": "Built for Engineers. <br></br> Transparent by Design.",
+        "subtitle": "No black boxes. See exactly how we secure your Microsoft Teams data through a direct, transparent Graph API connection.",
+        "step1": "> initializing connection to Microsoft Graph API...",
+        "step2": "[OK] Authenticated securely via OAuth2",
+        "step3": "> scanning Teams channels and chat history...",
+        "step4": "[OK] Found 42 active channels, 1,204 messages",
+        "step5": "> initiating encrypted data transfer to secure vault...",
+        "step6": "[sys] compressing payloads (zlib)",
+        "step7": "[OK] Transfer complete. 1.4GB synchronized.",
+        "step8": "> verifying checksums and data integrity...",
+        "step9": "[OK] Backup verified. State: SECURED."
     }
 }

@@ -3,7 +3,7 @@ import { Github, Twitter, Linkedin } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function Footer() {
-  const t = useTranslations("Index"); // Assuming useTranslations exists for localization if needed 
+  const t = useTranslations("Footer");
 
   const currentYear = new Date().getFullYear();
 
@@ -18,7 +18,7 @@ export default function Footer() {
                <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
             </span>
             <p className="text-sm leading-6 text-muted-foreground w-4/5">
-              Enterprise-grade backup solutions specifically engineered for Microsoft Teams architecture. Secure your chat history and files with transparent Graph API connections.
+              {t("description")}
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
@@ -40,63 +40,63 @@ export default function Footer() {
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-foreground">Solutions</h3>
+                <h3 className="text-sm font-semibold leading-6 text-foreground">{t("solutions")}</h3>
                 <nav aria-label="Solutions navigation" className="mt-6 flex flex-col space-y-4">
                   <Link href="#features" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
-                    Features
+                    {t("features")}
                   </Link>
                   <Link href="#pricing" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
-                    Pricing
+                    {t("pricing")}
                   </Link>
                   <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
-                    Enterprise
+                    {t("enterprise")}
                   </Link>
                   <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
-                    API Access
+                    {t("apiAccess")}
                   </Link>
                 </nav>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-foreground">Support</h3>
+                <h3 className="text-sm font-semibold leading-6 text-foreground">{t("support")}</h3>
                 <nav aria-label="Support navigation" className="mt-6 flex flex-col space-y-4">
                   <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
-                    Documentation
+                    {t("documentation")}
                   </Link>
                   <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
-                    Guides
+                    {t("guides")}
                   </Link>
                   <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
-                    API Status
+                    {t("apiStatus")}
                   </Link>
                 </nav>
               </div>
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-foreground">Company</h3>
+                <h3 className="text-sm font-semibold leading-6 text-foreground">{t("company")}</h3>
                 <nav aria-label="Company navigation" className="mt-6 flex flex-col space-y-4">
                   <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
-                    About
+                    {t("about")}
                   </Link>
                   <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
-                    Blog
+                    {t("blog")}
                   </Link>
                   <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
-                    Partners
+                    {t("partners")}
                   </Link>
                 </nav>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-foreground">Legal</h3>
+                <h3 className="text-sm font-semibold leading-6 text-foreground">{t("legal")}</h3>
                 <nav aria-label="Legal navigation" className="mt-6 flex flex-col space-y-4">
                   <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
-                    Privacy Policy
+                    {t("privacyPolicy")}
                   </Link>
                   <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
-                    Terms of Service
+                    {t("termsOfService")}
                   </Link>
                   <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
-                    Data Processing
+                    {t("dataProcessing")}
                   </Link>
                 </nav>
               </div>
@@ -107,7 +107,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 border-t border-border pt-8 sm:mt-20 lg:mt-24">
           <p className="text-xs leading-5 text-muted-foreground">
-            &copy; {currentYear} Backup Teams, Inc. All rights reserved. Microsoft Teams is a trademark of Microsoft Corporation.
+            &copy; {currentYear} Backup Teams, Inc. {t("copyright")}
           </p>
         </div>
       </div>

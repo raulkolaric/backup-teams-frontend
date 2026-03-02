@@ -2,19 +2,19 @@ import { Terminal } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function HowItWorksTerminal() {
-  const t = useTranslations("Index"); // Translations could be added later for standard copy if needed
+  const t = useTranslations("Terminal");
   
   // Static content to be rendered server-side
   const terminalSteps = [
-    { text: "> initializing connection to Microsoft Graph API...", delay: "0s" },
-    { text: "[OK] Authenticated securely via OAuth2", delay: "0.8s", color: "text-green-400" },
-    { text: "> scanning Teams channels and chat history...", delay: "1.6s" },
-    { text: "[OK] Found 42 active channels, 1,204 messages", delay: "2.4s", color: "text-green-400" },
-    { text: "> initiating encrypted data transfer to secure vault...", delay: "3.2s" },
-    { text: "[sys] compressing payloads (zlib)", delay: "4.0s", color: "text-muted-foreground" },
-    { text: "[OK] Transfer complete. 1.4GB synchronized.", delay: "4.8s", color: "text-green-400" },
-    { text: "> verifying checksums and data integrity...", delay: "5.6s" },
-    { text: "[OK] Backup verified. State: SECURED.", delay: "6.4s", color: "text-accent font-bold" },
+    { text: t('step1'), delay: "0s" },
+    { text: t('step2'), delay: "0.8s", color: "text-green-400" },
+    { text: t('step3'), delay: "1.6s" },
+    { text: t('step4'), delay: "2.4s", color: "text-green-400" },
+    { text: t('step5'), delay: "3.2s" },
+    { text: t('step6'), delay: "4.0s", color: "text-muted-foreground" },
+    { text: t('step7'), delay: "4.8s", color: "text-green-400" },
+    { text: t('step8'), delay: "5.6s" },
+    { text: t('step9'), delay: "6.4s", color: "text-accent font-bold" },
     { text: "> _", delay: "7.2s", color: "animate-pulse" }
   ];
 
@@ -39,10 +39,10 @@ export default function HowItWorksTerminal() {
         {/* Section Header */}
         <div className="text-center space-y-4">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">
-            Built for Engineers. <br className="hidden md:block"/> Transparent by Design.
+            {t.rich('title', { br: () => <br className="hidden md:block"/> })}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            No black boxes. See exactly how we secure your Microsoft Teams data through a direct, transparent Graph API connection.
+            {t('subtitle')}
           </p>
         </div>
 
