@@ -64,5 +64,5 @@ Instead of standard FTS excerpts, the system treats paragraphs as first-class ci
 - [x] Phase 2: RDS Metadata & full-text search
 - [x] Phase 3: Paragraph-segment extraction API
 - [x] Phase 4: CI/CD Pipeline to AWS EC2
-- [ ] Phase 5: Next.js Discovery Interface
-- [ ] Phase 6: Domain mapping and Cloudflare CDN
+- [x] Phase 5: Next.js Discovery Interface
+- [x] Phase 6: Domain mapping and Cloudflare CDN
