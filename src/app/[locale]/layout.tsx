@@ -23,6 +23,8 @@ export const metadata: Metadata = {
 import { Providers } from "@/components/providers";
 import { Toaster } from "@/components/ui/sonner";
 
+import Header from "@/components/ui/Header";
+
 export default async function RootLayout({
   children,
   params,
@@ -38,9 +40,7 @@ export default async function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <Providers>
-            <div className="flex justify-end p-4 absolute top-0 right-0 z-50">
-              <LanguageSwitcher />
-            </div>
+            <Header />
             {children}
             <Toaster />
           </Providers>
