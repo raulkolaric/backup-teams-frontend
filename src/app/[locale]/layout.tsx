@@ -23,7 +23,6 @@ export const metadata: Metadata = {
 import { Providers } from "@/components/providers";
 import { Toaster } from "@/components/ui/sonner";
 
-import Header from "@/components/ui/Header";
 
 export default async function RootLayout({
   children,
@@ -40,7 +39,6 @@ export default async function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <Providers>
-            <Header />
             {children}
             <Toaster />
           </Providers>
