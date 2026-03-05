@@ -2,6 +2,7 @@ import Hero from "@/components/ui/Hero";
 import FeaturesGrid from "@/components/ui/FeaturesGrid";
 import HowItWorksTerminal from "@/components/ui/HowItWorksTerminal";
 import ComparisonTable from "@/components/ui/ComparisonTable";
+import Pricing from "@/components/ui/Pricing";
 import VaultStats, { VaultStatsSkeleton } from "@/components/ui/VaultStats";
 import { Suspense } from "react";
 import LiquidEther from "@/components/LiquidEther";
@@ -64,6 +65,7 @@ export default function Home() {
       <Suspense fallback={<VaultStatsSkeleton />}>
         <VaultStats />
       </Suspense>
+      <Pricing />
       {/* <FeaturesGrid /> */}
       <HowItWorksTerminal />
       <ComparisonTable />
