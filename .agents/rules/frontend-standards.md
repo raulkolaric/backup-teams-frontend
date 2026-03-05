@@ -4,25 +4,26 @@ trigger: always_on
 
 # Frontend Architecture & Design Standards
 
-This document serves as the true north for the **Backup Teams Frontend**. It outlines our bespoke "Espresso Dark" design system and the strict engineering principles required to maintain a premium, enterprise-grade application.
+This document serves as the true north for the **Backup Teams Frontend**. It outlines our bespoke "Clean Cloud" design system and the strict engineering principles required to maintain a premium, enterprise-grade application.
 
-## 1. The Design System: "Espresso Dark"
+## 1. The Design System: "Clean Cloud"
 
-Our aesthetic is inspired by premium developer tools—a "warm terminal" vibe that feels professional, reduces eye strain, and commands attention.
+Our aesthetic is inspired by modern SaaS and editorial web design—an airy, minimalist vibe that relies on white space, striking contrast, and fluid liquid-ether backgrounds.
 
 ### 1.1 Core Tokens
 Always use the semantic CSS variables mapped to Tailwind, **never** hardcode hex values in your templates.
-*   **Canvas (`bg-background`)**: `var(--background)` - A deep, rich espresso `#1f1a18`. Use only for the lowest visual layer.
-*   **Surfaces (`bg-card`)**: `var(--card)` - A slightly elevated dark coffee `#27201d`. Use for panels, cards, and distinct UI boundaries.
-*   **Primary Accent (`text-accent`, `bg-accent`)**: `var(--accent)` - A glowing terracotta/burnt orange `#d46a43`. Use sparingly for primary actions (CTAs) and active UI states.
-*   **Typography (`text-foreground`, `text-muted-foreground`)**: `var(--foreground)` for high-contrast headers (warm parchment `#e5d9c5`); `var(--muted-foreground)` for secondary body text.
+*   **Canvas (`bg-background`)**: `var(--background)` - Pure white `#ffffff` or transparent to reveal the canvas background. Use only for the lowest visual layer.
+*   **Surfaces (`bg-card`)**: `var(--card)` - A crisp, very faint slate `#f8fafc`. Use for panels, cards, and distinct UI boundaries.
+*   **Primary Accent (`text-primary`, `bg-primary`)**: `var(--primary)` - A trustworthy, vibrant blue `#2563eb`. Use for primary actions (CTAs).
+*   **Secondary/Ethereal (`text-secondary`, `bg-accent`)**: `var(--secondary)` (Emerald Green `#10b981`) and `var(--accent)` (Sky Blue `#0ea5e9`).
+*   **Typography (`text-foreground`, `text-muted-foreground`)**: `var(--foreground)` for deep, high-contrast Slate 950 `#020617`; `var(--muted-foreground)` for secondary Slate 500 body text.
 
-### 1.2 Signature Visual Elements (The "Hero" Standard)
-When building new sections, adhere to the visual language established in `Hero.tsx`:
-*   **Glassmorphism (`backdrop-blur-md bg-card/60`)**: Use blurred, semi-transparent backgrounds over gradients for floating elements like navigation bars or status pills.
-*   **Ambient Glows (Radial Gradients)**: Use heavily blurred accent div elements (`blur-[120px] opacity-10 bg-accent`) behind main typography focal points to create depth.
-*   **Borders as Depth**: Always use `border-border` to define edges. Our layouts rely on subtle 1px strokes rather than heavy drop-shadows to distinguish overlapping cards.
-*   **Terminal Aesthetics**: For technical or data-heavy displays, utilize the mock-terminal layout (a header with 3 traffic-light dots and a monospace codebase body) to emphasize out developer/admin-centric utility.
+### 1.2 Signature Visual Elements (The "Aurora/Fluid" Standard)
+When building new sections, adhere to the visual language:
+*   **Typography**: We use a two-font editorial style. **Plus Jakarta Sans** for structure, headers, and UI, and **Instrument Serif** for elegant, italicized accents and quotes.
+*   **The Liquid Ether Foundation**: The bottom-most layer of the application is a responsive, highly optimized Three.js canvas rendering a fluid, ether-like simulation of blues and greens.
+*   **Clean Geometry & Glass**: Use white, frosted glass (`bg-white/70 backdrop-blur-md border border-slate-200`) to let the fluid background subtly peek through panels.
+*   **Shadows**: Use very soft, expansive drop-shadows rather than harsh borders if depth is needed (`shadow-xl shadow-slate-200/50`).
 
 ---
 
