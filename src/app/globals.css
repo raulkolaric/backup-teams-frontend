@@ -4,60 +4,52 @@
 
 @custom-variant dark (&:is(.dark *));
 
-:root {
-  /* Clean Cloud (Light Mode) */
-  --background: #ffffff;
-  --foreground: #020617;
-  /* Slate 950 */
-  --card: #f8fafc;
-  /* Slate 50 */
-  --card-foreground: #020617;
-  --popover: #ffffff;
-  --popover-foreground: #020617;
-  --primary: #2563eb;
-  /* Blue 600 */
-  --primary-foreground: #ffffff;
-  --secondary: #10b981;
-  /* Emerald 500 */
-  --secondary-foreground: #ffffff;
-  --muted: #f1f5f9;
-  /* Slate 100 */
-  --muted-foreground: #64748b;
-  /* Slate 500 */
-  --accent: #0ea5e9;
-  /* Sky 500 */
-  --accent-foreground: #020617;
-  --destructive: #ef4444;
-  /* Red 500 */
-  --destructive-foreground: #ffffff;
-  --border: #e2e8f0;
-  /* Slate 200 */
-  --input: #e2e8f0;
-  --ring: #2563eb;
-  --radius: 0.75rem;
-}
-
+:root,
 .dark {
-  /* Clean Cloud (Dark Mode - for later if needed) */
+  /* Aurora Dark Mode — canonical defaults */
   --background: #020617;
   --foreground: #f8fafc;
   --card: #0f172a;
   --card-foreground: #f8fafc;
   --popover: #020617;
   --popover-foreground: #f8fafc;
-  --primary: #B19EEF;
-  --primary-foreground: #020617;
-  --secondary: #1e293b;
-  --secondary-foreground: #f8fafc;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --secondary: #10b981;
+  --secondary-foreground: #ffffff;
   --muted: #1e293b;
   --muted-foreground: #94a3b8;
-  --accent: #FF9FFC;
+  --accent: #0ea5e9;
   --accent-foreground: #f8fafc;
   --destructive: #ef4444;
   --destructive-foreground: #f8fafc;
   --border: #1e293b;
   --input: #1e293b;
-  --ring: #B19EEF;
+  --ring: #2563eb;
+  --radius: 0.75rem;
+}
+
+.light {
+  /* Clean Cloud Light Mode — opt-in only */
+  --background: #ffffff;
+  --foreground: #020617;
+  --card: #f8fafc;
+  --card-foreground: #020617;
+  --popover: #ffffff;
+  --popover-foreground: #020617;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --secondary: #10b981;
+  --secondary-foreground: #ffffff;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #0ea5e9;
+  --accent-foreground: #020617;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #2563eb;
 }
 
 
@@ -117,10 +109,19 @@
   }
 }
 
+/* 
+ * Set background on `html` (not body) so the dark colour shows
+ * even when body is transparent (required for LiquidEther canvas).
+ * Non-layered CSS wins over @layer base, so we set body explicitly here too.
+ */
+html {
+  background-color: var(--background);
+}
+
 body {
   background-color: transparent;
-  /* Changed to transparent so LiquidEther is visible */
   font-family: var(--font-sans), sans-serif;
+  color: var(--foreground);
 }
 
 
