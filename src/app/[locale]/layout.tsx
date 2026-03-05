@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Instrument_Serif } from "next/font/google";
+import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -10,10 +10,10 @@ const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
 });
 
-const instrument = Instrument_Serif({
-  weight: "400",
+const playfair = Playfair_Display({
   variable: "--font-serif",
   subsets: ["latin"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -37,7 +37,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className="dark">
-      <body className={`${jakarta.variable} ${instrument.variable} antialiased`}>
+      <body className={`${jakarta.variable} ${playfair.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <Providers>
             {children}
