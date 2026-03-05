@@ -1,5 +1,7 @@
+"use client";
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import SplitText from '../SplitText';
 
 export default function Hero() {
   const t = useTranslations('Hero');
@@ -35,7 +37,17 @@ export default function Hero() {
           {/* Main headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.1]">
             {t('title1')}<span className="text-accent">{t('titleAccent')}</span><span className="font-sans">{t('title2')}</span><br />
-            <span className="font-serif italic font-medium">{t('title3')}</span>
+            <SplitText 
+              text={t('title3')} 
+              className="font-serif italic font-medium" 
+              delay={50} 
+              from={{ opacity: 0, y: 50 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.2} 
+              rootMargin="-50px" 
+              tag="span"
+              onLetterAnimationComplete={() => {}}
+            />
           </h1>
 
           {/* Sub-headline */}

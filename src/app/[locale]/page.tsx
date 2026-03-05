@@ -1,4 +1,3 @@
-
 import Hero from "@/components/ui/Hero";
 import FeaturesGrid from "@/components/ui/FeaturesGrid";
 import HowItWorksTerminal from "@/components/ui/HowItWorksTerminal";
@@ -65,7 +64,7 @@ export default function Home() {
       <Suspense fallback={<VaultStatsSkeleton />}>
         <VaultStats />
       </Suspense>
-      <FeaturesGrid />
+      {/* <FeaturesGrid /> */}
       <HowItWorksTerminal />
       <ComparisonTable />
       <Footer />
