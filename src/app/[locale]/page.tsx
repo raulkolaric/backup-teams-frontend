@@ -1,10 +1,10 @@
-"use client"
 
 import Hero from "@/components/ui/Hero";
 import FeaturesGrid from "@/components/ui/FeaturesGrid";
 import HowItWorksTerminal from "@/components/ui/HowItWorksTerminal";
 import ComparisonTable from "@/components/ui/ComparisonTable";
-import VaultStats from "@/components/ui/VaultStats";
+import VaultStats, { VaultStatsSkeleton } from "@/components/ui/VaultStats";
+import { Suspense } from "react";
 import LiquidEther from "@/components/LiquidEther";
 import Footer from "@/components/ui/Footer";
 
@@ -62,7 +62,9 @@ export default function Home() {
         <Hero />
       </div>
 
-      <VaultStats />
+      <Suspense fallback={<VaultStatsSkeleton />}>
+        <VaultStats />
+      </Suspense>
       <FeaturesGrid />
       <HowItWorksTerminal />
       <ComparisonTable />
