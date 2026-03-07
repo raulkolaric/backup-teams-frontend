@@ -62,7 +62,7 @@
         "copyright": "All rights reserved. Microsoft Teams is a trademark of Microsoft Corporation."
     },
     "Terminal": {
-        "title": "Built for Engineers. <br></br> Transparent by Design.",
+        "title": "Built for Engineers. Transparent by Design.",
         "subtitle": "No black boxes. See exactly how we secure your Microsoft Teams data through a direct, transparent Graph API connection.",
         "step1": "> initializing connection to Microsoft Graph API...",
         "step2": "[OK] Authenticated securely via OAuth2",

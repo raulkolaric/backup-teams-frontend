@@ -1,5 +1,7 @@
 import { fetchVaultStats, type VaultStats } from "@/lib/api";
 import MagicBento from "../MagicBento";
+import { WordFadeIn } from "./word-fade-in";
+import { BlurFade } from "./blur-fade";
 
 // ── Icon map for known file types ─────────────────────────────────────────────
 
@@ -108,13 +110,16 @@ export default async function VaultStats() {
             </span>
             Live Vault Stats
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">
-            What&apos;s in the vault?
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Real-time snapshot of every file archived from Microsoft Teams —
-            updated continuously as new content is synced.
-          </p>
+          <WordFadeIn 
+            words="What's in the vault?" 
+            className="text-3xl md:text-5xl font-bold tracking-tight text-foreground text-balance" 
+          />
+          <BlurFade delay={0.25} inView>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              Real-time snapshot of every file archived from Microsoft Teams —
+              updated continuously as new content is synced.
+            </p>
+          </BlurFade>
         </div>
 
         {/* Error state */}

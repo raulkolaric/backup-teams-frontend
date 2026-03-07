@@ -1,5 +1,7 @@
 import { Terminal } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { WordFadeIn } from "./word-fade-in";
+import { BlurFade } from "./blur-fade";
 
 export default function HowItWorksTerminal() {
   const t = useTranslations("Terminal");
@@ -37,13 +39,16 @@ export default function HowItWorksTerminal() {
       
       <div className="max-w-4xl w-full px-6 flex flex-col gap-12">
         {/* Section Header */}
-        <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">
-            {t.rich('title', { br: () => <br className="hidden md:block"/> })}
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t('subtitle')}
-          </p>
+        <div className="flex flex-col gap-4 text-center items-center">
+          <WordFadeIn 
+            words={t('title')} 
+            className="text-3xl md:text-5xl font-bold tracking-tight text-foreground text-balance" 
+          />
+          <BlurFade delay={0.25} inView>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              {t('subtitle')}
+            </p>
+          </BlurFade>
         </div>
 
         {/* Terminal Window */}

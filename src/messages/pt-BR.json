@@ -62,7 +62,7 @@
         "copyright": "Todos os direitos reservados. Microsoft Teams é uma marca registrada da Microsoft Corporation."
     },
     "Terminal": {
-        "title": "Feito para Engenheiros. <br></br> Transparente por Princípio.",
+        "title": "Feito para Engenheiros. Transparente por Princípio.",
         "subtitle": "Adeus caixas pretas. Veja exatamente como nós protegemos os dados do seu Microsoft Teams através de acessos diretos à Graph API.",
         "step1": "> inicializando conexão com a Microsoft Graph API...",
         "step2": "[OK] Autenticando com segurança via OAuth2",
