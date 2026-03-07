@@ -14,7 +14,7 @@ export default function Header() {
         <div className="flex flex-1 items-center gap-6">
           <Link href="/" className="flex items-center gap-2 transition-opacity hover:opacity-80">
             <Image 
-              src="/group_2_fill (1).png" 
+              src="/WOW2backup-teams.svg" 
               alt="Backup Teams Logo" 
               width={32} 
               height={32} 

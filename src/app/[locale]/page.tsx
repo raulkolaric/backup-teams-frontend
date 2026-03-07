@@ -7,10 +7,12 @@ import VaultStats, { VaultStatsSkeleton } from "@/components/ui/VaultStats";
 import { Suspense } from "react";
 import LiquidEther from "@/components/LiquidEther";
 import Footer from "@/components/ui/Footer";
+import Header from "@/components/ui/Header";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col font-sans">
+      <Header />
 
       {/*
        * Per the official docs, LiquidEther renders its WebGL canvas
