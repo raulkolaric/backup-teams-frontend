@@ -55,15 +55,16 @@ export default function Hero() {
           {/* Dynamic Mount Block — uses grid to perfectly reserve height */}
           <div className="grid w-full">
             {/* Invisible ghost block to hold precise layout flow and prevent layout shift */}
-            <div className="col-start-1 row-start-1 invisible pointer-events-none">
+            <div className="col-start-1 row-start-1 invisible pointer-events-none mb-2">
               <p className="text-lg md:text-xl max-w-2xl leading-relaxed">
                 {t('description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full justify-start">
-                <button className="px-8 py-4 rounded-full font-semibold text-base min-w-[200px]">
+                {/* To perfectly match dimensions, ghost buttons must have the exact same box-model classes like borders/padding */}
+                <button className="px-8 py-4 rounded-full font-semibold text-base min-w-[200px] border border-transparent">
                   {t('startAction')}
                 </button>
-                <button className="px-8 py-4 rounded-full font-medium text-base min-w-[200px]">
+                <button className="px-8 py-4 rounded-full font-medium text-base min-w-[200px] border border-border">
                   {t('docsAction')}
                 </button>
               </div>
@@ -89,7 +90,7 @@ export default function Hero() {
 
                   {/* CTAs */}
                   <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full justify-start animate-in fade-in slide-in-from-bottom-4 duration-500 fill-mode-both">
-                    <button className="bg-accent text-accent-foreground px-8 py-4 rounded-full font-semibold text-base transition-all duration-300 ease-in-out hover:opacity-90 hover:scale-110 shadow-[0_0_20px] shadow-accent/25 min-w-[200px] cursor-pointer">
+                    <button className="bg-accent text-accent-foreground px-8 py-4 rounded-full font-semibold text-base transition-all duration-300 ease-in-out hover:opacity-90 hover:scale-110 shadow-[0_0_20px] shadow-accent/25 min-w-[200px] border border-transparent cursor-pointer">
                       {t('startAction')}
                     </button>
                     <button className="bg-card text-foreground border border-border px-8 py-4 rounded-full font-medium text-base transition-all duration-300 ease-in-out hover:bg-muted hover:scale-110 cursor-pointer min-w-[200px]">
