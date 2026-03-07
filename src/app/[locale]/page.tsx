@@ -37,8 +37,8 @@ export default function Home() {
           autoSpeed={0.5}
           autoIntensity={2.2}
           takeoverDuration={0.25}
-          autoResumeDelay={3000}
-          autoRampDuration={0.6}
+          autoResumeDelay={300}
+          autoRampDuration={0.1}
         />
 
         {/* Gradient fade: same stacking context as the canvas, position: absolute */}

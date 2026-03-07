@@ -1,10 +1,11 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import SplitText from '../SplitText';
 
 export default function Hero() {
   const t = useTranslations('Hero');
+  const [isTitleComplete, setIsTitleComplete] = useState(false);
 
   return (
     <section className="relative w-full min-h-[85vh] flex flex-col justify-center overflow-hidden">
@@ -46,23 +47,58 @@ export default function Hero() {
               threshold={0.2} 
               rootMargin="-50px" 
               tag="span"
-              onLetterAnimationComplete={() => {}}
+              textAlign='left'
+              onLetterAnimationComplete={() => setIsTitleComplete(true)}
             />
           </h1>
 
-          {/* Sub-headline */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            {t('description')}
-          </p>
+          {/* Dynamic Mount Block — uses grid to perfectly reserve height */}
+          <div className="grid w-full">
+            {/* Invisible ghost block to hold precise layout flow and prevent layout shift */}
+            <div className="col-start-1 row-start-1 invisible pointer-events-none">
+              <p className="text-lg md:text-xl max-w-2xl leading-relaxed">
+                {t('description')}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full justify-start">
+                <button className="px-8 py-4 rounded-full font-semibold text-base min-w-[200px]">
+                  {t('startAction')}
+                </button>
+                <button className="px-8 py-4 rounded-full font-medium text-base min-w-[200px]">
+                  {t('docsAction')}
+                </button>
+              </div>
+            </div>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full justify-start">
-            <button className="bg-accent text-accent-foreground px-8 py-4 rounded-full font-semibold text-base transition-all hover:opacity-90 shadow-[0_0_20px_rgba(34,197,94,0.25)] min-w-[200px] cursor-pointer">
-              {t('startAction')}
-            </button>
-            <button className="bg-card text-foreground border border-border px-8 py-4 rounded-full font-medium text-base transition-colors hover:bg-muted cursor-pointer min-w-[200px]">
-              {t('docsAction')}
-            </button>
+            {/* Actual animated block — mounts on top of the ghost */}
+            <div className="col-start-1 row-start-1">
+              {isTitleComplete && (
+                <>
+                  {/* Sub-headline */}
+                  <SplitText
+                    text={t('description')}
+                    className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
+                    delay={10}
+                    from={{ opacity: 0, y: 20 }}
+                    to={{ opacity: 1, y: 0 }}
+                    threshold={0.2}
+                    rootMargin="-50px"
+                    tag="p"
+                    onLetterAnimationComplete={() => {}}
+                    textAlign='left'
+                  />
+
+                  {/* CTAs */}
+                  <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full justify-start animate-in fade-in slide-in-from-bottom-4 duration-500 fill-mode-both">
+                    <button className="bg-accent text-accent-foreground px-8 py-4 rounded-full font-semibold text-base transition-all duration-300 ease-in-out hover:opacity-90 hover:scale-110 shadow-[0_0_20px] shadow-accent/25 min-w-[200px] cursor-pointer">
+                      {t('startAction')}
+                    </button>
+                    <button className="bg-card text-foreground border border-border px-8 py-4 rounded-full font-medium text-base transition-all duration-300 ease-in-out hover:bg-muted hover:scale-110 cursor-pointer min-w-[200px]">
+                      {t('docsAction')}
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
           </div>
         </div>
 
