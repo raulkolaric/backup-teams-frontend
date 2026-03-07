@@ -109,6 +109,16 @@
   }
 }
 
+@keyframes slide-diagonal {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -40px -40px;
+  }
+}
+
 /* 
  * Set background on `html` (not body) so the dark colour shows
  * even when body is transparent (required for LiquidEther canvas).

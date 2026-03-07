@@ -15,7 +15,13 @@ export default function ComparisonTable() {
   ];
 
   return (
-    <section className="relative w-full max-w-6xl mx-auto px-6 py-24 flex flex-col gap-12">
+    <section className="relative w-full overflow-hidden py-24 border-t border-border">
+      
+      {/* Subtle animated diagonal lines background */}
+      <div 
+      />
+
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 flex flex-col gap-12">
       
       {/* Section Header */}
       <div className="flex flex-col gap-4 text-left items-start">
@@ -80,6 +86,7 @@ export default function ComparisonTable() {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );
