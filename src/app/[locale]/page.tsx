@@ -62,13 +62,30 @@ export default function Home() {
         <Hero />
       </div>
 
-      <Suspense fallback={<VaultStatsSkeleton />}>
-      <ComparisonTable />
-      <VaultStats />
-      </Suspense>
-      <HowItWorksTerminal />
-      <Pricing />
-      {/* <FeaturesGrid /> */}
+      {/* Global dot pattern wrapper for all sections below Hero */}
+      <div className="relative">
+        {/* Background pattern */}
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.055] z-0"
+          style={{
+            backgroundImage: "radial-gradient(circle, var(--foreground) 1px, transparent 1px)",
+            backgroundSize: "28px 28px",
+            maskImage: "linear-gradient(to bottom, transparent, black 200px, black calc(100% - 200px), transparent)",
+            WebkitMaskImage: "linear-gradient(to bottom, transparent, black 200px, black calc(100% - 200px), transparent)",
+          }}
+        />
+
+        {/* Content container */}
+        <div className="relative z-10 w-full flex flex-col">
+          <Suspense fallback={<VaultStatsSkeleton />}>
+            <ComparisonTable />
+            <VaultStats />
+          </Suspense>
+          <HowItWorksTerminal />
+          <Pricing />
+          {/* <FeaturesGrid /> */}
+        </div>
+      </div>
       <Footer />
     </main>
   );

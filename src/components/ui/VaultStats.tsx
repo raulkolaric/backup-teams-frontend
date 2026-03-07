@@ -96,31 +96,22 @@ export default async function VaultStats() {
   const maxCount = topExt[0]?.[1] ?? 1;
 
   return (
-    <section id="vault-stats" className="relative w-full overflow-hidden py-24 border-t border-border">
-      {/* Background pattern */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.025]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, var(--foreground) 1px, transparent 1px)",
-          backgroundSize: "28px 28px",
-        }}
-      />
+    <section id="vault-stats" className="relative w-full overflow-hidden py-24">
 
       <div className="relative z-10 mx-auto max-w-6xl px-6">
         {/* Section header */}
-        <div className="mb-12 flex flex-col gap-3">
-          <div className="inline-flex items-center gap-2 w-fit px-3 py-1 rounded-full border border-border bg-card text-xs text-muted-foreground">
+        <div className="mb-12 flex flex-col items-center text-center gap-4">
+          <div className="inline-flex items-center gap-2 w-fit px-3 py-1 rounded-full border border-border bg-card text-xs text-muted-foreground mb-2">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
             </span>
             Live Vault Stats
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">
             What&apos;s in the vault?
           </h2>
-          <p className="text-muted-foreground max-w-xl">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Real-time snapshot of every file archived from Microsoft Teams —
             updated continuously as new content is synced.
           </p>

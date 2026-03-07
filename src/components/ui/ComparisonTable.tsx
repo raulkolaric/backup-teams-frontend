@@ -15,7 +15,7 @@ export default function ComparisonTable() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden py-24 border-t border-border">
+    <section className="relative w-full overflow-hidden py-24">
       
       {/* Subtle animated diagonal lines background */}
       <div 
@@ -24,14 +24,14 @@ export default function ComparisonTable() {
       <div className="relative z-10 w-full max-w-6xl mx-auto px-6 flex flex-col gap-12">
       
       {/* Section Header */}
-      <div className="flex flex-col gap-4 text-left items-start">
+      <div className="flex flex-col gap-4 text-center items-center">
         <WordFadeIn 
           words={t('title')} 
-          className="text-4xl md:text-5xl text-balance" 
+          className="text-3xl md:text-5xl font-bold tracking-tight text-foreground text-balance" 
           highlightWords={['enough']} 
         />
         <BlurFade delay={0.25} inView>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+          <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
         </BlurFade>
