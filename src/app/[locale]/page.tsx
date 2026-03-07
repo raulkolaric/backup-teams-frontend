@@ -63,12 +63,12 @@ export default function Home() {
       </div>
 
       <Suspense fallback={<VaultStatsSkeleton />}>
-        <VaultStats />
+      <ComparisonTable />
+      <VaultStats />
       </Suspense>
+      <HowItWorksTerminal />
       <Pricing />
       {/* <FeaturesGrid /> */}
-      <HowItWorksTerminal />
-      <ComparisonTable />
       <Footer />
     </main>
   );

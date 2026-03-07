@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import GradualBlur from '../GradualBlur';
+
 import { BlurFade } from './blur-fade';
 import { WordFadeIn } from './word-fade-in';
 
@@ -75,24 +75,23 @@ export default function Pricing() {
   const t = useTranslations('Pricing');
 
   return (
-    <section className="relative w-full max-w-6xl mx-auto px-6 py-24 flex flex-col gap-16">
+    <section className="py-16 px-8">
 
-      {/* Section header */}
-      <div className="flex flex-col gap-4 text-center items-center">
-        <WordFadeIn
-          words={t('title')}
-          className="text-4xl md:text-5xl text-balance"
-        />
-        <BlurFade delay={0.25} inView>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            {t('subtitle')}
-          </p>
-        </BlurFade>
-      </div>
+        {/* Section header */}
+        <div className="flex flex-col gap-4 text-center items-center mb-12 max-w-6xl mx-auto">
+          <WordFadeIn
+            words={t('title')}
+            className="text-4xl md:text-5xl text-balance"
+          />
+          <BlurFade delay={0.25} inView>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+              {t('subtitle')}
+            </p>
+          </BlurFade>
+        </div>
 
-      {/* Cards wrapper — GradualBlur applies the bottom‑blur reveal */}
-      <div className="relative" style={{ position: 'relative', overflow: 'hidden' }}>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center py-4">
+        {/* Pricing cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start max-w-6xl mx-auto">
           {TIERS.map((tier, idx) => (
             <BlurFade key={tier.key} delay={0.15 * idx} inView>
               <article
@@ -165,19 +164,6 @@ export default function Pricing() {
             </BlurFade>
           ))}
         </div>
-
-        {/* GradualBlur bottom reveal */}
-        <GradualBlur
-          target="parent"
-          position="bottom"
-          height="7rem"
-          strength={3}
-          divCount={10}
-          curve="bezier"
-          exponential
-          opacity={1}
-        />
-      </div>
     </section>
   );
 }

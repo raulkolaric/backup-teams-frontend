@@ -167,12 +167,12 @@ export default async function VaultStats() {
               enableStars={true}
               enableSpotlight={true}
               enableBorderGlow={true}
-              enableTilt={false}
-              enableMagnetism={false}
+              enableTilt={true}
+              enableMagnetism={true}
               clickEffect={true}
-              spotlightRadius={400}
+              spotlightRadius={500}
               particleCount={12}
-              glowColor="132, 0, 255"
+              glowColor="37, 99, 235"
               disableAnimations={false}
             />
           ) : !error ? (
