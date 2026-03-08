@@ -15,7 +15,7 @@ export default function ComparisonTable() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden py-24">
+    <section id="features" className="relative w-full overflow-hidden py-24 scroll-mt-20">
       
       {/* Subtle animated diagonal lines background */}
       <div 
