@@ -55,7 +55,7 @@ export default function Header() {
             </Link>
             <Link 
               href="/signup" 
-              className="inline-flex h-9 items-center justify-center rounded-md bg-accent px-4 py-2 text-sm font-medium text-accent-foreground shadow hover:bg-accent/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 transition-colors"
+              className="inline-flex h-9 items-center justify-center rounded-full bg-accent px-4 py-2 text-sm font-medium text-accent-foreground shadow hover:bg-accent/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 transition-colors"
             >
               {t('getStarted')}
             </Link>

@@ -2,6 +2,7 @@ import { fetchVaultStats, type VaultStats } from "@/lib/api";
 import MagicBento from "../MagicBento";
 import { WordFadeIn } from "./word-fade-in";
 import { BlurFade } from "./blur-fade";
+import { getTranslations } from "next-intl/server";
 
 // ── Icon map for known file types ─────────────────────────────────────────────
 
@@ -88,6 +89,8 @@ export default async function VaultStats() {
     error = err.message ?? "Could not load stats.";
   }
 
+  const t = await getTranslations("VaultStats");
+
   // Sort extensions by count descending, take top 8
   const topExt = stats
     ? Object.entries(stats.files_by_extension)
@@ -108,16 +111,15 @@ export default async function VaultStats() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
             </span>
-            Live Vault Stats
+            {t('pill')}
           </div>
           <WordFadeIn 
-            words="What's in the vault?" 
+            words={t('title')} 
             className="text-3xl md:text-5xl font-bold tracking-tight text-foreground text-balance" 
           />
           <BlurFade delay={0.25} inView>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Real-time snapshot of every file archived from Microsoft Teams —
-              updated continuously as new content is synced.
+              {t('subtitle')}
             </p>
           </BlurFade>
         </div>
@@ -125,7 +127,7 @@ export default async function VaultStats() {
         {/* Error state */}
         {error && (
           <div className="rounded-xl border border-destructive/40 bg-destructive/10 p-6 text-sm text-destructive">
-            ⚠️ Could not reach the API: {error}
+            {t('error')}{error}
           </div>
         )}
 
@@ -136,26 +138,26 @@ export default async function VaultStats() {
               cards={[
                 {
                   title: stats.total_files.toLocaleString(),
-                  description: "All archived file objects",
-                  label: "Total Files",
+                  description: t('totalFilesDesc'),
+                  label: t('totalFilesLabel'),
                   color: "var(--card)"
                 },
                 {
                   title: stats.storage_human,
-                  description: `${stats.s3_object_count.toLocaleString()} S3 objects`,
-                  label: "Storage Used",
+                  description: t('storageUsedDesc', { count: stats.s3_object_count.toLocaleString() }),
+                  label: t('storageUsedLabel'),
                   color: "var(--card)"
                 },
                 {
                   title: stats.total_classes.toLocaleString(),
-                  description: "Distinct Teams channels",
-                  label: "Channels",
+                  description: t('channelsDesc'),
+                  label: t('channelsLabel'),
                   color: "var(--card)"
                 },
                 {
                   title: stats.indexed_pdfs.toLocaleString(),
-                  description: `of ${stats.total_files.toLocaleString()} total files`,
-                  label: "Searchable PDFs",
+                  description: t('searchablePdfsDesc', { total: stats.total_files.toLocaleString() }),
+                  label: t('searchablePdfsLabel'),
                   color: "var(--card)"
                 }
               ]}
@@ -181,7 +183,7 @@ export default async function VaultStats() {
         {/* File type breakdown */}
         <div className="rounded-xl border border-border bg-card p-6 md:p-8">
           <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-6">
-            File Types Breakdown
+            {t('fileTypesTitle')}
           </h3>
 
           {topExt.length > 0 ? (
@@ -191,7 +193,7 @@ export default async function VaultStats() {
               ))}
             </ul>
           ) : (
-            <p className="text-sm text-muted-foreground">No file data yet.</p>
+            <p className="text-sm text-muted-foreground">{t('noFileData')}</p>
           )}
         </div>
       </div>
@@ -199,6 +201,8 @@ export default async function VaultStats() {
   );
 }
 
+// Note: Suspense fallbacks cannot be async components in Next.js.
+// The skeleton shows for <1s during data fetch, so hardcoded strings are acceptable here.
 export function VaultStatsSkeleton() {
   return (
     <section id="vault-stats" className="relative w-full overflow-hidden py-24 border-t border-border">

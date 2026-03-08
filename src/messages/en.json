@@ -106,5 +106,21 @@
         "entFeat4": "99.99% SLA guarantee",
         "entFeat5": "Dedicated account manager",
         "entCta": "Contact Sales"
+    },
+    "VaultStats": {
+        "pill": "Live Vault Stats",
+        "title": "What's in the vault?",
+        "subtitle": "Real-time snapshot of every file archived from Microsoft Teams — updated continuously as new content is synced.",
+        "error": "⚠️ Could not reach the API: ",
+        "totalFilesDesc": "All archived file objects",
+        "totalFilesLabel": "Total Files",
+        "storageUsedDesc": "{count} S3 objects",
+        "storageUsedLabel": "Storage Used",
+        "channelsDesc": "Distinct Teams channels",
+        "channelsLabel": "Channels",
+        "searchablePdfsDesc": "of {total} total files",
+        "searchablePdfsLabel": "Searchable PDFs",
+        "fileTypesTitle": "File Types Breakdown",
+        "noFileData": "No file data yet."
     }
 }

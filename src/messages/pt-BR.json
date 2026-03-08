@@ -103,8 +103,24 @@
         "entFeat1": "Tudo do plano Pro",
         "entFeat2": "Vault S3 dedicado",
         "entFeat3": "SSO e provisionamento SCIM",
-        "entFeat4": "SLA de 99.99%",
+        "entFeat4": "SLA garantido de 99.99%",
         "entFeat5": "Gerente de conta dedicado",
-        "entCta": "Falar com Vendas"
+        "entCta": "Fale com Vendas"
+    },
+    "VaultStats": {
+        "pill": "Estatísticas do Cofre Ao Vivo",
+        "title": "O que há no cofre?",
+        "subtitle": "Um retrato em tempo real de cada arquivo arquivado do Microsoft Teams — atualizado continuamente assim que novos conteúdos são sincronizados.",
+        "error": "⚠️ Não foi possível conectar à API: ",
+        "totalFilesDesc": "Todos os objetos arquivados",
+        "totalFilesLabel": "Total de Arquivos",
+        "storageUsedDesc": "{count} objetos S3",
+        "storageUsedLabel": "Armazenamento Usado",
+        "channelsDesc": "Canais distintos do Teams",
+        "channelsLabel": "Canais",
+        "searchablePdfsDesc": "de {total} arquivos totais",
+        "searchablePdfsLabel": "PDFs Pesquisáveis",
+        "fileTypesTitle": "Distribuição de Tipos de Arquivo",
+        "noFileData": "Nenhum dado de arquivo ainda."
     }
 }
