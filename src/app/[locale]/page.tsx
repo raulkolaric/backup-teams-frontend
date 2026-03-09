@@ -88,10 +88,7 @@ export default function Home() {
           
           {/* LightRays Background explicitly behind Pricing */}
           <div className="relative w-full">
-            <div 
-              className="absolute z-0 pointer-events-none overflow-hidden mix-blend-screen opacity-100"
-              style={{ top: '-400px', bottom: '-400px', left: 0, right: 0 }}
-            >
+            <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden mix-blend-screen opacity-100">
               {/* Top gradient fade */}
               <div
                 aria-hidden="true"
@@ -100,24 +97,23 @@ export default function Home() {
                   top: 0,
                   left: 0,
                   right: 0,
-                  height: '600px',
+                  height: '30%',
                   background: 'linear-gradient(to top, transparent, #020617)',
                   pointerEvents: 'none',
-                  zIndex: 4,
+                  zIndex:4,
                 }}
               />
               <LightRays
                 raysOrigin="top-center"
-                raysColor="#00d9ff"
-                raysSpeed={0.7}
+                raysColor="#be1cd4"
+                raysSpeed={1}
                 lightSpread={0.7}
                 rayLength={3}
-                followMouse={false}
+                followMouse={true}
                 mouseInfluence={0.1}
                 noiseAmount={0}
                 distortion={0}
                 className="custom-rays"
-                pulsating={false}
                 fadeDistance={1.7}
                 saturation={2}
               />
@@ -129,7 +125,7 @@ export default function Home() {
                   bottom: 0,
                   left: 0,
                   right: 0,
-                  height: '600px',
+                  height: '45%',
                   background: 'linear-gradient(to bottom, transparent, #020617)',
                   pointerEvents: 'none',
                   zIndex: 10,
