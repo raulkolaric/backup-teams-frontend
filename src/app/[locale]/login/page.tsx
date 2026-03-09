@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import { LoginForm } from "@/components/features/auth/LoginForm";
+import { Link } from "@/i18n/routing";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Login | Backup Teams",
@@ -19,9 +21,21 @@ export default function LoginPage() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 w-full max-w-md">
+      <div className="relative z-10 w-full max-w-md flex flex-col items-center">
+        {/* Logo routing back to Home */}
+        <Link href="/" className="mb-8 transition-opacity hover:opacity-80">
+          <Image 
+            src="/WOW2backup-teams.svg" 
+            alt="Backup Teams Logo" 
+            width={48} 
+            height={48} 
+            className="object-contain"
+            priority
+          />
+        </Link>
+
         {/* Mock-terminal header & Glassmorphism Card */}
-        <div className="backdrop-blur-md bg-card/60 rounded-2xl border border-border/60 shadow-2xl overflow-hidden p-[1px]">
+        <div className="backdrop-blur-md bg-card/60 rounded-2xl border border-border/60 shadow-2xl overflow-hidden p-[1px] w-full">
           {/* Mock Terminal Header */}
           <div className="flex gap-2 p-4 items-center border-b border-border/40 bg-card/40">
             <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
