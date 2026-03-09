@@ -122,5 +122,16 @@
         "searchablePdfsLabel": "Searchable PDFs",
         "fileTypesTitle": "File Types Breakdown",
         "noFileData": "No file data yet."
+    },
+    "Signup": {
+        "backToHome": "Back to Home",
+        "heading": "Create an account",
+        "subheading": "Connect your Microsoft tenant to begin archiving.",
+        "termsText": "By clicking continue, you agree to our",
+        "termsLink": "Terms of Service",
+        "andText": "and",
+        "privacyLink": "Privacy Policy",
+        "terminalTitle": "Zero-Config Provisioning",
+        "terminalSubtitle": "We deploy a dedicated, encrypted S3 vault specifically for your tenant in seconds. Fully compliant, instantly searchable."
     }
 }

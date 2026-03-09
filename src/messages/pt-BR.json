@@ -122,5 +122,16 @@
         "searchablePdfsLabel": "PDFs Pesquisáveis",
         "fileTypesTitle": "Distribuição de Tipos de Arquivo",
         "noFileData": "Nenhum dado de arquivo ainda."
+    },
+    "Signup": {
+        "backToHome": "Voltar ao Início",
+        "heading": "Crie uma conta",
+        "subheading": "Conecte seu tenant Microsoft para iniciar o arquivamento.",
+        "termsText": "Ao clicar em continuar, você concorda com nossos",
+        "termsLink": "Termos de Serviço",
+        "andText": "e",
+        "privacyLink": "Política de Privacidade",
+        "terminalTitle": "Provisionamento Zero-Configuração",
+        "terminalSubtitle": "Implantamos um cofre S3 dedicado e criptografado especificamente para o seu tenant em segundos. Totalmente em conformidade, instantaneamente pesquisável."
     }
 }

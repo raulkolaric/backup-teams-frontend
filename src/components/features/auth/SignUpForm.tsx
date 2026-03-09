@@ -9,18 +9,18 @@ import { toast } from "sonner";
 import { GoogleLogin } from "@react-oauth/google";
 import { loginWithGoogleAction } from "@/lib/auth-actions";
 
-export function LoginForm() {
+export function SignUpForm() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isPending, setIsPending] = useState(false);
 
-  const handleStandardLogin = async (e: React.FormEvent) => {
+  const handleStandardSignup = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsPending(true);
     // For now we'll simulate an error, since we focus on Google Auth
     setTimeout(() => {
-      toast.error("Standard email login is disabled for development. Please use Google Login.");
+      toast.error("Standard email registration is disabled for development. Please use Google Login.");
       setIsPending(false);
     }, 1000);
   };
@@ -38,7 +38,7 @@ export function LoginForm() {
         toast.error(res.error);
         setIsPending(false);
       } else {
-        toast.success("Login successful!");
+        toast.success("Account created successfully!");
         router.push("/dashboard");
       }
     } catch (err) {
@@ -48,7 +48,7 @@ export function LoginForm() {
   };
 
   const handleGoogleError = () => {
-    toast.error("Google Login Failed");
+    toast.error("Google Registration Failed");
   };
 
   return (
@@ -79,7 +79,7 @@ export function LoginForm() {
         </div>
       </div>
 
-      <form onSubmit={handleStandardLogin} className="w-full space-y-4">
+      <form onSubmit={handleStandardSignup} className="w-full space-y-4">
         <div className="space-y-2">
           <Label htmlFor="email" className="text-foreground">Email</Label>
           <Input 
@@ -96,9 +96,6 @@ export function LoginForm() {
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <Label htmlFor="password" className="text-foreground">Password</Label>
-            <a href="#" className="text-xs text-accent hover:underline">
-              Forgot password?
-            </a>
           </div>
           <Input 
             id="password" 
@@ -115,14 +112,14 @@ export function LoginForm() {
           disabled={isPending}
           className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
         >
-          {isPending ? "Logging in..." : "Login"}
+          {isPending ? "Creating account..." : "Sign Up"}
         </Button>
       </form>
       
       <div className="text-center text-sm text-muted-foreground mt-4">
-        Don&apos;t have an account?{" "}
-        <Link href="/signup" className="text-accent hover:underline decoration-accent/50 underline-offset-4">
-          Register
+        Already have an account?{" "}
+        <Link href="/login" className="text-accent hover:underline decoration-accent/50 underline-offset-4">
+          Login
         </Link>
       </div>
     </div>
