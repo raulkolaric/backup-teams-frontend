@@ -6,6 +6,7 @@ import Pricing from "@/components/ui/Pricing";
 import VaultStats, { VaultStatsSkeleton } from "@/components/ui/VaultStats";
 import { Suspense } from "react";
 import LiquidEther from "@/components/LiquidEther";
+import LightRays from "@/components/LightRays";
 import Footer from "@/components/ui/Footer";
 import Header from "@/components/ui/Header";
 
@@ -65,10 +66,10 @@ export default function Home() {
       </div>
 
       {/* Global dot pattern wrapper for all sections below Hero */}
-      <div className="relative">
+      <div className="relative mb-30">
         {/* Background pattern */}
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.055] z-0"
+          className="pointer-events-none absolute inset-0 opacity-[0.045] z-0"
           style={{
             backgroundImage: "radial-gradient(circle, var(--foreground) 1px, transparent 1px)",
             backgroundSize: "28px 28px",
@@ -84,7 +85,60 @@ export default function Home() {
             <VaultStats />
           </Suspense>
           <HowItWorksTerminal />
-          <Pricing />
+          
+          {/* LightRays Background explicitly behind Pricing */}
+          <div className="relative w-full">
+            <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden mix-blend-screen opacity-100">
+              {/* Top gradient fade */}
+              <div
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  height: '50%',
+                  background: 'linear-gradient(to top, transparent, #020617)',
+                  pointerEvents: 'none',
+                  zIndex:4,
+                }}
+              />
+              <LightRays
+                raysOrigin="top-center"
+                raysColor="#00d9ff"
+                raysSpeed={0.7}
+                lightSpread={2}
+                rayLength={3}
+                followMouse={false}
+                mouseInfluence={0.1}
+                noiseAmount={0}
+                distortion={0}
+                className="custom-rays"
+                pulsating={false}
+                fadeDistance={2}
+                saturation={2}
+              />
+              {/* Bottom gradient fade per user request */}
+              <div
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  height: '45%',
+                  background: 'linear-gradient(to bottom, transparent, #020617)',
+                  pointerEvents: 'none',
+                  zIndex: 10,
+                }}
+              />
+            </div>
+            
+            <div className="relative z-10 w-full">
+              <Pricing />
+            </div>
+          </div>
+
           {/* <FeaturesGrid /> */}
         </div>
       </div>

@@ -8,7 +8,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full border-t border-border bg-background pt-16 pb-8">
+    <footer className="w-full border-t border-border bg-background pt-10 pb-6">
       <div className="mx-auto max-w-6xl px-6">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           {/* Brand & Mission Statement */}
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
 
           {/* Links Grid */}
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+          <div className="mt-10 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-foreground">{t("solutions")}</h3>
@@ -105,7 +105,7 @@ export default function Footer() {
         </div>
         
         {/* Bottom Bar */}
-        <div className="mt-16 border-t border-border pt-8 sm:mt-20 lg:mt-24">
+        <div className="mt-10 pt-4 sm:mt-12 lg:mt-16">
           <p className="text-xs leading-5 text-muted-foreground">
             &copy; {currentYear} Backup Teams, Inc. {t("copyright")}
           </p>

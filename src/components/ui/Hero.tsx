@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import SplitText from '../SplitText';
 
 export default function Hero() {
@@ -61,9 +62,9 @@ export default function Hero() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full justify-start">
                 {/* To perfectly match dimensions, ghost buttons must have the exact same box-model classes like borders/padding */}
-                <button className="px-8 py-4 rounded-full font-semibold text-base min-w-[200px] border border-transparent">
+                <Link href="/signup" className="px-8 py-4 rounded-full font-semibold text-base min-w-[200px] border border-transparent text-center">
                   {t('startAction')}
-                </button>
+                </Link>
                 <button className="px-8 py-4 rounded-full font-medium text-base min-w-[200px] border border-border">
                   {t('docsAction')}
                 </button>
@@ -90,9 +91,9 @@ export default function Hero() {
 
                   {/* CTAs */}
                   <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full justify-start animate-in fade-in slide-in-from-bottom-4 duration-500 fill-mode-both">
-                    <button className="bg-accent text-accent-foreground px-8 py-4 rounded-full font-semibold text-base transition-all duration-300 ease-in-out hover:opacity-90 hover:scale-110 shadow-[0_0_20px] shadow-accent/25 min-w-[200px] border border-transparent cursor-pointer">
+                    <Link href="/signup" className="flex items-center justify-center bg-accent text-accent-foreground px-8 py-4 rounded-full font-semibold text-base transition-all duration-300 ease-in-out hover:opacity-90 hover:scale-110 shadow-[0_0_20px] shadow-accent/25 min-w-[200px] border border-transparent cursor-pointer">
                       {t('startAction')}
-                    </button>
+                    </Link>
                     <button className="bg-card text-foreground border border-border px-8 py-4 rounded-full font-medium text-base transition-all duration-300 ease-in-out hover:bg-muted hover:scale-110 cursor-pointer min-w-[200px]">
                       {t('docsAction')}
                     </button>
