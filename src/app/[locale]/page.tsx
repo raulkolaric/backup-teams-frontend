@@ -35,7 +35,7 @@ export default function Home() {
           iterationsViscous={32}
           iterationsPoisson={32}
           resolution={0.5}
-          isBounce={false}
+          isBounce={true}
           autoDemo
           autoSpeed={0.5}
           autoIntensity={2.2}

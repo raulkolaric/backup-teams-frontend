@@ -89,7 +89,7 @@ export default function Footer() {
               <div className="mt-10 md:mt-0">
                 <h3 className="text-sm font-semibold leading-6 text-foreground">{t("legal")}</h3>
                 <nav aria-label="Legal navigation" className="mt-6 flex flex-col space-y-4">
-                  <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
+                  <Link href="/privacy" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
                     {t("privacyPolicy")}
                   </Link>
                   <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
