@@ -95,7 +95,7 @@ export default function Footer() {
                   <Link href="/terms-of-service" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
                     {t("termsOfService")}
                   </Link>
-                  <Link href="#" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
+                  <Link href="/data-processing" className="text-sm leading-6 text-muted-foreground hover:text-accent transition-colors">
                     {t("dataProcessing")}
                   </Link>
                 </nav>

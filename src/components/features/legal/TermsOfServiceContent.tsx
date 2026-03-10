@@ -93,8 +93,6 @@ export default function TermsOfServiceContent() {
             <div className="mt-4 p-6 bg-card rounded-xl border border-border inline-block">
               <p className="font-mono text-sm text-foreground">legal@backupteams.com</p>
               <p className="text-sm text-muted-foreground mt-2">Backup Teams Inc.</p>
-              <p className="text-sm text-muted-foreground">123 Cloud Infrastructure Way</p>
-              <p className="text-sm text-muted-foreground">San Francisco, CA 94107, USA</p>
             </div>
           </section>
 
