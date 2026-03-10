@@ -26,7 +26,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ locale
       <div className="pt-24"></div>
 
       <div className="relative z-10 w-full flex-grow flex flex-col pt-16">
-        {locale === 'pt' ? <PrivacyPolicyContentPtBr /> : <PrivacyPolicyContentEn />}
+        {locale === 'pt-BR' ? <PrivacyPolicyContentPtBr /> : <PrivacyPolicyContentEn />}
       </div>
 
       <div className="relative z-20">
