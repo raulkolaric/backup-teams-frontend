@@ -27,7 +27,7 @@ export default function Home() {
        */}
       <div style={{ position: 'relative', width: '100%', height: '100vh' }}>
         <LiquidEther
-          colors={[ '#00d9ff', '#ffffffff', '#99f2efff' ]}
+          colors={[ '#0ea5e9', '#0ea5e9', '#0ea5e9' ]}
           mouseForce={20}
           cursorSize={100}
           isViscous
